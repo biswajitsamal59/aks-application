@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: myapp-dev
 nameSuffix: -dev
 resources:
-- ../bases/myapp
+- ../base/myapp
 - namespace.yaml
 replicas:
 - count: 1
