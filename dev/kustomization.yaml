@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: myapp-dev
+nameSuffix: -dev
+resources:
+- ../bases/myapp
+- namespace.yaml
+replicas:
+- count: 1
+  name: myapp1-deployment
